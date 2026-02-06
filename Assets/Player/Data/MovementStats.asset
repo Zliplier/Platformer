@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c716eae7e3884fbda73e640b08f4c9a8, type: 3}
+  m_Name: MovementStats
+  m_EditorClassIdentifier: 
+  gravity: {x: 0, y: -25, z: 0}
+  gravityAccel: 10
+  walkSpeed: 20
+  aimMovementMultiplier: 0.2
+  aimDotThreshold: 0.75
+  groundAccel: 5
+  groundDecel: 20
+  airAccel: 5
+  airDecel: 5
+  turnCompensation: 0.8
+  jumpHeight: 5
+  timeTillApex: 0.35
+  hangTimeApex: 0.075
+  jumpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.16162515
+      outSlope: 0.16162515
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.088073395
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.5123214
+      outSlope: 0.5123214
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.09724772
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  jumpAllowed: 1
+  jumpBufferTime: 0.2
+  jumpCoyoteTime: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  groundBoxSize: {x: 0.5, y: 0, z: 0.5}
+  groundRayDistance: 0.3
+  showVelocity: 0
+  showGravity: 0
+  showJumping: 0
+  showGroundBox: 1
