@@ -24,7 +24,7 @@ namespace Player.Data
         public float jumpHeight = 5f;
         public float timeTillApex = 0.35f;
         public float hangTimeApex = 0.075f;
-        public AnimationCurve jumpCurve;
+        public AnimationCurve jumpSpeedCurve;
         public int jumpAllowed = 2;
         public float jumpBufferTime = 0.125f;
         public float jumpCoyoteTime = 0.1f;

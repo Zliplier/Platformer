@@ -1,5 +1,7 @@
 ﻿using System;
 using Player.Data;
+using Player.Script.Animation;
+using UnityEditor.Animations;
 using UnityEngine;
 using Zlipacket.CoreZlipacket.Player.Input;
 using Zlipacket.CoreZlipacket.Player.Input.InputMap;
@@ -13,10 +15,13 @@ namespace Player
         public GameObject bodyRoot => _player.bodyRoot;
         public Rigidbody rb => _player.rb;
         public Collider col => _player.col;
+        public Animator animator => _player.animator;
+        public PlayerAnimationController playerAnimationController => _player.playerAnimationController;
         public Transform feetPos => _player.feetPos;
         public SO_InputReader inputReader => _player.inputReader;
         public PlayerInputMap playerInputMap => inputReader.playerInputMap;
         public UIInputMap uiInputMap => inputReader.uiInputMap;
+        public Vector3 mousePosition => _player.mousePosition;
         
         public SO_MovementStats MoveStats => _player.moveStats;
 

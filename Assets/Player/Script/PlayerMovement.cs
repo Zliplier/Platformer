@@ -27,7 +27,7 @@ namespace Player.Script
 		
 		//Input
 		private Vector3 movementInput = Vector3.zero;
-		private Vector3 mouseInput => Camera.main.ScreenToWorldPoint(new Vector3(playerInputMap.mousePosition.x, playerInputMap.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z)));
+		private Vector3 mouseInput => mousePosition;
 		
 		//Aiming
 		private Vector3 aimDirection = Vector3.zero;
@@ -108,14 +108,14 @@ namespace Player.Script
 			if (isFlipRight)
 			{
 				IsFacingRight = true;
-				bodyRoot.transform.localRotation =
-					Quaternion.Euler(0, 0, 0);
+				bodyRoot.transform.localScale = new Vector3(1, bodyRoot.transform.localScale.y, bodyRoot.transform.localScale.z);
 			}
 			else
 			{
 				IsFacingRight = false;
-				bodyRoot.transform.localRotation =
-					Quaternion.Euler(0, 180, 0);
+				/*bodyRoot.transform.localRotation =
+					Quaternion.Euler(0, 180, 0);*/
+				bodyRoot.transform.localScale = new Vector3(-1, bodyRoot.transform.localScale.y, bodyRoot.transform.localScale.z);
 			}
 		}
 		
@@ -246,7 +246,7 @@ namespace Player.Script
 				yield return new WaitForFixedUpdate();
 				jumpPercentage = Mathf.Clamp(jumpTime / MoveStats.timeTillApex, 0f, 1f);
 				
-				jumpVelocity.y = Mathf.Lerp(initialJumpVelocity * aimMultiplier, 0f, MoveStats.jumpCurve.Evaluate(jumpPercentage));
+				jumpVelocity.y = Mathf.Lerp(initialJumpVelocity * aimMultiplier, 0f, MoveStats.jumpSpeedCurve.Evaluate(jumpPercentage));
 				
 				jumpTime += Time.fixedDeltaTime;
 				if (jumpCutFlag)

@@ -1,9 +1,12 @@
-﻿namespace Player.Script
+﻿using Player.Data.Combat;
+
+namespace Player.Script
 {
     public class PlayerCombatController : PlayerScript
     {
-        
-        
+
+        private SO_AttackData attackData;
+        public bool IsAttacking => attackData != null;
         
         private void OnEnable()
         {
