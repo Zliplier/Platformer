@@ -25,27 +25,27 @@ MonoBehaviour:
   jumpHeight: 7
   timeTillApex: 0.35
   hangTimeApex: 0.075
-  jumpCurve:
+  jumpSpeedCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.16162515
-      outSlope: 0.16162515
+      inSlope: 2.562913
+      outSlope: 2.562913
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.088073395
+      inWeight: 0
+      outWeight: 0.051376145
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0.5123214
-      outSlope: 0.5123214
+      inSlope: 1.9395022
+      outSlope: 1.9395022
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.09724772
-      outWeight: 0.33333334
+      inWeight: 0.056880713
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
