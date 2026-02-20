@@ -1,12 +1,17 @@
-﻿using Player.Data.Combat;
+﻿using System.Collections;
+using Player.Data.Combat;
+using UnityEngine;
 
 namespace Player.Script
 {
     public class PlayerCombatController : PlayerScript
     {
 
+        public PlayerMouseController mouseController;
+        
         private SO_AttackData attackData;
-        public bool IsAttacking => attackData != null;
+        private Coroutine co_Attack;
+        public bool IsAttacking => co_Attack != null;
         
         private void OnEnable()
         {
@@ -29,9 +34,17 @@ namespace Player.Script
         {
             
         }
-        
-        
-        
-        
+
+
+
+        private IEnumerator Attacking()
+        {
+            
+            
+            
+            
+            
+            yield return null;
+        }
     }
 }

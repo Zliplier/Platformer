@@ -27,7 +27,8 @@ namespace Player.Script
 		
 		//Input
 		private Vector3 movementInput = Vector3.zero;
-		private Vector3 mouseInput => mousePosition;
+		[SerializeField] private PlayerMouseController mouseController;
+		private Vector3 mouseInput => mouseController.mousePosition;
 		
 		//Aiming
 		private Vector3 aimDirection = Vector3.zero;
